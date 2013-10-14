@@ -1,0 +1,158 @@
+
+body {
+	background: #91d1ed;
+	color: #111;
+	margin: 0;
+	padding: 0;
+	/*background-image: url(images/3.jpg);*/
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	font-family: "Josefin Sans";
+	font-size: 1.1em;
+}
+
+a {
+	color: #f06593;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.banner {
+	width: 100%;
+}
+
+.left, .right {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.left {
+	width: 400px;
+	float: left;
+}
+
+.right {
+	width: 400px;
+}
+
+.top {
+	height: 152px;
+}
+
+.bottom {
+	padding: 10px 0;
+	/*background: rgba(0, 0, 0, 0.2);*/
+	border-top: 2px solid #333;
+	background: #111;
+	color: white;
+	clear: both;
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	height: 30px;
+	/*height: 300px;*/
+}
+
+.logo {
+	background: #c2e5f4;
+	/*background: rgba(255, 255, 255, 0.45);*/
+}
+
+.logo img {
+	margin-top: 10px;
+}
+
+.pink { color: #f06593; }
+.rosy { color: #f094c6; }
+.babyblue { color: #c2e5f4; }
+
+.treats { 
+	color: #f06593; 
+	background: white;
+	padding: 5px;
+
+}
+
+.info {
+	background: #c2e5f4;
+	/*background: rgba(255, 255, 255, 0.45);*/
+	height: 550px;
+	overflow-y: scroll;
+}
+
+.info ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 10px;
+	margin-bottom: 20px;
+}
+
+.info li {
+	margin: 10px 0;
+}
+
+.info .inner {
+	padding: 20px;
+	text-align: left;
+}
+
+.info p {
+	margin-top: 0;
+}
+
+.info h2 {
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.info h3 {
+	text-align: left;
+	margin: 0;
+}
+
+#slider-container {
+	width: 400px;
+	height: auto;
+	margin: auto;
+	background: #fff;
+}
+
+.flex-control-thumbs {
+	margin: 0;
+}
+
+.container {
+	margin: auto;
+	text-align: center;
+	width: 800px;
+	height: 702px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -351px;
+	margin-left: -400px;
+
+	/*border: 1px solid #6694a3;*/
+/*
+	border: 1px solid #dec5a0;*/
+	/*border-width: 0 1px 0 1px;*/
+	/*border: 3px solid black;*/
+	box-shadow: 0 0 15px 5px #f0e287;
+	/*width: 1000px;*/
+}
+
+.slides img {
+	height: 400px;
+	width: auto;
+}
+
+.mission {
+	font-size: 24px;
+}
