@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700);
 
 body {
 	background: #91d1ed;
@@ -155,4 +156,8 @@ a:hover {
 
 .mission {
 	font-size: 24px;
+}
+
+.flex-direction-nav {
+	display: none;  /* CAUTION! */
 }
