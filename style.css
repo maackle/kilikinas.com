@@ -2,15 +2,16 @@
 
 body {
 	background: #91d1ed;
-	color: #111;
+	color: #222;
 	margin: 0;
 	padding: 0;
 	/*background-image: url(images/3.jpg);*/
 	background-size: cover;
 	width: 100%;
-	height: 100%;
-	font-family: "Josefin Sans";
+	/*height: 100%;*/
+	font-family: "Josefin Sans", Georgia, sans-serif;
 	font-size: 1.1em;
+	text-align: center;
 }
 
 a {
@@ -20,6 +21,25 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+.container {
+	margin: auto;
+	position: relative;
+	text-align: center;
+	width: 800px;
+}
+
+#main-box {
+	margin: 50px auto 0;
+	/*height: 702px;*/
+	box-shadow: 0 0 15px 5px #f0e287;
+	/*border: 1px solid #6694a3;*/
+/*
+	border: 1px solid #dec5a0;*/
+	/*border-width: 0 1px 0 1px;*/
+	/*border: 3px solid black;*/
+	/*width: 1000px;*/
 }
 
 .banner {
@@ -54,9 +74,10 @@ a:hover {
 	color: white;
 	clear: both;
 	font-size: 22px;
+	line-height: 22px;
 	font-weight: bold;
-	letter-spacing: 0.1em;
-	height: 30px;
+	/*letter-spacing: 0.1em;*/
+	height: 25px;
 	/*height: 300px;*/
 }
 
@@ -83,7 +104,7 @@ a:hover {
 .info {
 	background: #c2e5f4;
 	/*background: rgba(255, 255, 255, 0.45);*/
-	height: 550px;
+	height: 547px;
 	overflow-y: scroll;
 }
 
@@ -129,25 +150,6 @@ a:hover {
 	margin: 0;
 }
 
-.container {
-	margin: auto;
-	text-align: center;
-	width: 800px;
-	height: 702px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-top: -351px;
-	margin-left: -400px;
-
-	/*border: 1px solid #6694a3;*/
-/*
-	border: 1px solid #dec5a0;*/
-	/*border-width: 0 1px 0 1px;*/
-	/*border: 3px solid black;*/
-	box-shadow: 0 0 15px 5px #f0e287;
-	/*width: 1000px;*/
-}
 
 .slides img {
 	height: 400px;
@@ -156,6 +158,23 @@ a:hover {
 
 .mission {
 	font-size: 24px;
+}
+
+.attribution {
+	position: absolute;
+	bottom: 10;
+	right: 0;
+	width: 100%;
+	color: #fff;
+}
+
+.attribution a {
+	color: #c2e5f4;
+	color: #fff;
+}
+
+.attribution .container {
+	text-align: center;
 }
 
 .flex-direction-nav {
