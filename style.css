@@ -172,6 +172,9 @@ a:hover {
 	color: #c2e5f4;
 	color: #fff;
 }
+.attribution a:hover {
+	color: #f06593;
+}
 
 .attribution .container {
 	text-align: center;
