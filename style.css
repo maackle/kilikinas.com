@@ -178,11 +178,12 @@ a:hover {
 	right: 0;
 	width: 100%;
 	color: #fff;
+	font-size: 12px;
 }
 
 .attribution a {
 	color: #c2e5f4;
-	color: #fff;
+	/*color: #fff;*/
 }
 .attribution a:hover {
 	color: #f06593;
