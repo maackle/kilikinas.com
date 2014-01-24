@@ -168,6 +168,27 @@ a:hover {
 	width: auto;
 }
 
+.gofundme {
+	border-radius: 7px;
+	display: block;
+	text-align: center;
+	margin: 10px auto 30px;
+	padding: 10px;
+	background: white;
+	color: black;
+}
+
+.gofundme:hover {
+	color: #f06593;
+	text-decoration: none;
+}
+
+.gofundme h1 {
+	margin: 0;
+	font-size: 30px;
+	/*background: black;*/
+}
+
 .mission {
 	font-size: 24px;
 }

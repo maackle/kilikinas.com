@@ -1,0 +1,23 @@
+$pink: #f06593;
+
+html,body {
+	
+}
+
+#main-slider {
+	width: 100%;
+	max-height: 500px;
+}
+
+.pink { color: $pink; }
+
+.biglogo {
+	text-align: center;
+
+	img {
+		width: 400px;
+		min-width: 300px;
+		max-width: 80%;
+
+	}
+}
