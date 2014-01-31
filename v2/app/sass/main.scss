@@ -1,7 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700);
+@import "compass/utilities/general/clearfix";
+
 $pink: #f06593;
 
 html,body {
-	
+	font-family: Georgia, sans-serif;
+	// font-size: 20px;
 }
 
 #main-slider {
@@ -19,5 +23,32 @@ html,body {
 		min-width: 300px;
 		max-width: 80%;
 
+	}
+}
+
+.navbar {
+	@include clearfix;
+	text-align: center;
+
+	.logo {
+		$size: 102px;
+		// width: $size;
+		height: $size;
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+}
+
+.treats-page {
+	.item {
+		img {
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+		}
 	}
 }
