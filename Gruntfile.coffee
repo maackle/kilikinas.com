@@ -14,6 +14,7 @@ module.exports = (grunt) ->
 			server:
 				options:
 					port: 1337
+					open: true
 					livereload: livereloadPort
 					base: '<%= config.dist %>'
 
