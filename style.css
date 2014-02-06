@@ -106,7 +106,12 @@ a:hover {
 	margin-top: 10px;
 }
 
+.white-bg {
+	background: white;
+}
+
 .pink { color: #f06593; }
+.pink-bg { background: #f06593; }
 .rosy { color: #f094c6; }
 .babyblue { color: #c2e5f4; }
 
@@ -115,6 +120,15 @@ a:hover {
 	background: white;
 	padding: 5px;
 
+}
+
+.treat .description {
+	font-size: 1.1em;
+	margin: 10px 0;
+}
+
+.treat .ingredients {
+	margin: 10px;
 }
 
 .info {
