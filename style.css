@@ -183,8 +183,13 @@ a:hover {
 }
 
 .gofundme:hover {
-	color: #f06593;
+	background: #f06593;
+	color: white !important;
 	text-decoration: none;
+}
+
+.gofundme:hover h2 {
+	color: white;
 }
 
 .gofundme h1 {
@@ -233,5 +238,14 @@ a:hover {
 }
 
 .sq-embed-item {
-	width: 40%;
+	display: block;
+	padding: 30px;
+	margin: 15px;
+	background: white;
+	color: black;
+}
+
+.sq-embed-item:hover {
+	color: #f06593;
+	text-decoration: none;
 }
