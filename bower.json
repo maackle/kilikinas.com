@@ -6,6 +6,7 @@
     "lodash": "~2.4.1",
     "bootstrap": "~3.0.3",
     "async": "~0.2.5",
-    "nivo-slider": "*"
+    "nivo-slider": "*",
+    "photoset-grid": "*"
   }
 }

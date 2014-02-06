@@ -1,35 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>kilikina's chocolat</title>
-    <link rel="stylesheet" type="text/css" href="/assets/vendor/lodash/dist/lodash.min.js">
-    <link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/vendor/nivo-slider/nivo-slider.css">
-    <link rel="stylesheet" type="text/css" href="/assets/vendor/nivo-slider/themes/default/default.css">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
-    <script type="text/javascript" src="/assets/vendor/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/assets/vendor/nivo-slider/jquery.nivo.slider.pack.js"></script>
-    <script type="text/javascript" src="/assets/scripts/main.js"></script>
-  </head>
-  <body>
-    <div id="logo-watermark"></div>
-    <div class="container">
-      <div class="navbar"><a href="/"><img src="assets/images/logo-pink.png" class="logo"></a>
-        <ul class="links">
-          <li><a href="flavors.html">flavors</a></li>
-          <li><a href="story.html">story</a></li>
-          <li><a href="contact.html">contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
-      <div id="main-slider"><img src="assets/images/slider/cacao-elixir.jpg"><img src="assets/images/slider/chunks.jpg"></div>
-    </div>
-    <script>
-      $( function() {
-       $('#main-slider').nivoSlider();
-      });
-    </script>
-  </body>
-</html>
+<!DOCTYPE html><html><head><title>kilikina's chocolat</title><link rel="stylesheet" type="text/css" href="/assets/vendor/lodash/dist/lodash.min.js"><link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="/assets/vendor/nivo-slider/nivo-slider.css"><link rel="stylesheet" type="text/css" href="/assets/vendor/nivo-slider/themes/default/default.css"><link rel="stylesheet" type="text/css" href="/assets/styles/main.css"><script type="text/javascript" src="/assets/vendor/jquery/jquery.min.js"></script><script type="text/javascript" src="/assets/vendor/photoset-grid/jquery.photoset-grid.js"></script><script type="text/javascript" src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script><script type="text/javascript" src="/assets/vendor/nivo-slider/jquery.nivo.slider.pack.js"></script><script type="text/javascript" src="/assets/scripts/main.js"></script></head><body><div class="container"><div class="navbar"><a href="/"><img src="assets/images/logo-pink.png" class="logo"></a><ul class="links"><li><a href="flavors.html">flavors</a></li><li><a href="story.html">story</a></li><li><a href="contact.html">contact</a></li></ul></div></div><div class="container"><div data-layout="12" class="photoset-grid"><img src="assets/images/slider/cacao-elixir.jpg"><img src="assets/images/slider/chunks.jpg"><img src="assets/images/slider/cacao-elixir.jpg"><img src="assets/images/slider/chunks.jpg"><img src="assets/images/slider/chunks.jpg"></div><div id="main-slider"><img src="assets/images/slider/cacao-elixir.jpg"><img src="assets/images/slider/chunks.jpg"></div></div><script>$( function() {
+ $('#main-slider').nivoSlider();
+ $('.photoset-grid').photosetGrid({
+  gutter: 8,
+  highresLinks: true,
+ });
+});</script></body></html>

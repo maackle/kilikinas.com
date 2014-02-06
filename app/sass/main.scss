@@ -20,11 +20,40 @@ html,body {
 }
 
 #main-slider {
-	width: 100%;
+	margin: auto;
+	width: 300px;
 	max-height: 300px;
 }
 
 .pink { color: $pink; }
+
+.photoset-grid {
+	max-width: 500px;
+	margin: auto;
+}
+.image-grid {
+	img {
+		max-width: 100%;
+	}
+
+	.col {
+		display: inline-block;
+		margin: 2px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.col.half {
+		width: 48%;
+	}
+	.col.third {
+		width: 33%;
+	}
+}
 
 .biglogo {
 	text-align: center;
