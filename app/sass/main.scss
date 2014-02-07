@@ -140,11 +140,12 @@ $header-image-height-large: 300px;
 	padding: 60px 0;
 	background: white;
 	text-align: center;
-	color: #777;
+	color: rgba(black, 0.8);
 	background: rgba($baby-baby-blue, 0.95);
 	border-top: 10px solid $baby-baby-blue;
 
 	.footer-stamp {
 		margin: 30px auto 60px;
+		opacity: 0.8;
 	}
 }
