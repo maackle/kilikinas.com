@@ -76,14 +76,15 @@ $header-image-height-large: 300px;
 		margin: 30px auto 50px;
 		.image {
 			text-align: center;
+			margin: 0 auto 20px;
 			img {
-				border-radius: 10px;
+				// border-radius: 10px;
 				border: 2px solid black;
-				margin: 0 auto 20px;
 				max-height: 200px;
 			}
 		}
 		.name {
+			text-align: left;
 			font-size: 30px;
 			margin: 0 auto 10px;
 		}
@@ -95,15 +96,24 @@ $header-image-height-large: 300px;
 			// clear: both;
 		}
 		@include respond-to(non-mobile) {
-
+			// &.left {
+			// 	.info {
+			// 		margin: 0;
+			// 		margin-left: $image-size + 30;
+			// 	}
+			// 	.image {
+			// 		float: left;
+			// 	}
+			// }
 			.info {
-				// margin-left: $image-size + 20;
+				margin-left: $image-size + 30;
+				text-align: justify;
 			}
 			.image {
 				padding: 0;
+				float: left;
 				img {
-					float: right;
-					margin: 0 20px 20px 0;
+					// margin: 0 30px 20px 30px;
 					width: $image-size;
 					height: $image-size;
 				}
