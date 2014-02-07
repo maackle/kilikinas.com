@@ -12,6 +12,7 @@ $break-sm: 768px;
 $pink: #f06593;
 $baby-blue: #c2e5f4;
 $baby-baby-blue: #d0eaf4;
+$baby-baby-baby-blue: #ebf5ff;
 
 $width-constraint: 1600px;
 $navbar-size: 60px;
@@ -45,6 +46,7 @@ $header-image-height-large: 300px;
 .home-page {
 	padding: 50px 0;
 	text-align: center;
+	background: $baby-baby-blue;
 
 	.big-stamp {
 		max-height: 400px;
@@ -151,8 +153,7 @@ $header-image-height-large: 300px;
 	background: white;
 	text-align: center;
 	color: rgba(black, 0.8);
-	background: rgba($baby-baby-blue, 0.95);
-	border-top: 10px solid $baby-baby-blue;
+	background: $baby-baby-blue;
 
 	.footer-stamp {
 		margin: 30px auto 60px;

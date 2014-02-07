@@ -11,7 +11,7 @@ img {
 }
 
 #outer-limits {
-	background: $baby-baby-blue url(../../assets/images/bg-paisley.png) center;
+	background: $baby-baby-blue url(../../assets/images/bg-paisley-alpha.png) center;
 	max-width: $width-constraint;
 	margin: auto;
 	min-height: 100%;
@@ -71,7 +71,7 @@ a:link, a:visited {
 	margin: auto;
 	// margin-top: $navbar-size;
 	text-align: center;
-	background: $baby-blue url(../../assets/images/headers/15.jpg) center;
+	background: $baby-baby-blue url(../../assets/images/headers/15.jpg) center;
 	background-size: cover;
 	.text {
 		padding-top: ($header-image-height-small - $content-overlap-small) / 2 - 40;
