@@ -2,11 +2,38 @@
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700);
 
 @import "compass/utilities/general/clearfix";
+@import "compass/css3";
 
 $pink: #f06593;
+$baby-blue: #c2e5f4;
+
+$width-constraint: 1600px;
+$navbar-size: 60px;
+$navbar-margin: 10px;
+$content-overlap: 50px;
+$header-image-height: 300px;
 
 html,body {
 	font-family: 'Quattrocento Sans', Georgia, sans-serif;
+	// background: rgba($baby-blue, 0.5);
+}
+
+#outer-limits {
+	background: white url(../../assets/images/bg-paisley.png);
+	max-width: $width-constraint;
+	margin: auto;
+}
+
+.contrained {
+	max-width: $width-constraint;
+}
+
+h1, h2, h3, h3 {
+	font-family: 'Josefin Sans', Georgia, sans-serif;
+}
+
+a:link, a:visited {
+	@include single-transition(all, 250ms);
 }
 
 #logo-watermark {
@@ -19,41 +46,17 @@ html,body {
 	height: 800px;
 }
 
-#main-slider {
-	margin: auto;
-	width: 300px;
-	max-height: 300px;
+#content-wrapper {
+	margin-top: -$content-overlap;
+}
+
+.content-block {
+	background: rgba(white, 0.98);
+	padding: 50px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .pink { color: $pink; }
-
-.photoset-grid {
-	max-width: 500px;
-	margin: auto;
-}
-.image-grid {
-	img {
-		max-width: 100%;
-	}
-
-	.col {
-		display: inline-block;
-		margin: 2px;
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-
-	.col.half {
-		width: 48%;
-	}
-	.col.third {
-		width: 33%;
-	}
-}
 
 .biglogo {
 	text-align: center;
@@ -66,13 +69,64 @@ html,body {
 	}
 }
 
+#background-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+#big-image {
+	width: 100%;
+	height: 100%;
+	max-width: 1600px;
+	// height: 600px;
+	margin: auto;
+	background: url(../../assets/images/headers/15.jpg) center;
+	background-size: cover;
+}
+
+#header-image-wrapper {
+	// position: relative;
+	margin-top: $navbar-size;
+	text-align: center;
+}
+
+#header-image {
+	// position: absolute;
+	width: 100%;
+	height: $header-image-height;
+	max-width: 1600px;
+	// height: 600px;
+	margin: auto;
+	background: url(../../assets/images/headers/15.jpg) center;
+	background-size: cover;
+	h1 {
+		padding-top: ($header-image-height - $content-overlap) / 2;
+		color: white;
+		text-shadow: 0 0 8px rgba(black, 0.8);
+		font-size: 60px;
+	}
+}
+
+#navbar-wrapper {
+	background: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	// border-bottom: 4px solid black;
+	box-shadow: 0 4px 3px rgba(black, 0.5);
+}
+
 .navbar {
-	$size: 60px;
+	$size: $navbar-size - $navbar-margin*2;
 	@include clearfix;
-	// text-align: center;
 
 	font-family: 'Josefin Sans', Georgia, sans-serif;
-	margin: 30px auto;
+	margin: $navbar-margin auto;
 	height: $size;
 	position: relative;
 
@@ -80,28 +134,43 @@ html,body {
 		padding: 0;
 		list-style: none;
 		margin-left: 380px;
-		margin-top: 14px;
 		display: block;
+		text-align: right;
 		// display: inline-block;
 	}
 
 	li {
 		display: inline-block;
-		border-left: 4px solid $pink;
+		// border-left: 4px solid $pink;
 		a {
-			font-size: 24px;
-			font-weight: bold;
-			padding: 0px 30px;
+			font-size: 32px;
+			font-weight: normal;
+			padding: 0px $navbar-margin;
 			color: black;
+			vertical-align: middle;
+			&:hover {
+				text-decoration: none;
+				// background: $pink;
+				color: $pink;
+				// color: white;
+			}
 		}
-		&:first-child {
+		&:first-child:before {
 			border-left: none;
+			content: "";
 		}
 	}
 
+	li:before {
+		display: inline-block;
+		content: "•";
+		color: $pink;
+		font-size: 36px;
+		vertical-align: middle;
+	}
 
 	.logo {
-		max-height: $size;
+		height: $size;
 		float: left;
 		vertical-align: middle;
 		// position: absolute;

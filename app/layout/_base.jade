@@ -1,3 +1,5 @@
+include mixins
+
 doctype html
 html
 	head
@@ -20,9 +22,22 @@ html
 
 	body
 		//- #logo-watermark
+		.constrained
+			block big-image
+				#background-wrapper
+					#big-image
 
-		block navbar
-			.container
-				include ../modules/navbar
+		#navbar-wrapper
+			block navbar
+				.container
+					include ../modules/navbar
 
-		block content
+		#outer-limits
+			#header-image-wrapper
+				block header-image
+					#header-image
+						h1 flavors
+
+			#content-wrapper
+				block content
+
