@@ -2,3 +2,15 @@ mixin content-block()
 	.container
 		.content-block
 			block
+
+mixin header-image(text, image)
+	.header-image(style="background-image: url(#{image})")
+		.text
+			h1= text
+
+mixin flavor(name, image)
+	.item.col-md-6
+		img(src=image)
+		.info
+			h2.name= name
+			block

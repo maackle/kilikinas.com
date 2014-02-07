@@ -15,13 +15,19 @@ $header-image-height: 300px;
 
 html,body {
 	font-family: 'Quattrocento Sans', Georgia, sans-serif;
+	height: 100%;
 	// background: rgba($baby-blue, 0.5);
 }
 
+img {
+	max-width: 100%;
+}
+
 #outer-limits {
-	background: white url(../../assets/images/bg-paisley.png);
+	background: white url(../../assets/images/bg-paisley.png) center;
 	max-width: $width-constraint;
 	margin: auto;
+	min-height: 100%;
 }
 
 .contrained {
@@ -29,7 +35,7 @@ html,body {
 }
 
 h1, h2, h3, h3 {
-	font-family: 'Josefin Sans', Georgia, sans-serif;
+	font-family: 'Josefin Slab', Georgia, sans-serif;
 }
 
 a:link, a:visited {
@@ -47,7 +53,9 @@ a:link, a:visited {
 }
 
 #content-wrapper {
-	margin-top: -$content-overlap;
+	@include clearfix;
+	padding-bottom: 180px;
+	margin-top: $navbar-size;
 }
 
 .content-block {
@@ -65,7 +73,6 @@ a:link, a:visited {
 		width: 400px;
 		min-width: 300px;
 		max-width: 80%;
-
 	}
 }
 
@@ -88,27 +95,32 @@ a:link, a:visited {
 	background-size: cover;
 }
 
-#header-image-wrapper {
-	// position: relative;
-	margin-top: $navbar-size;
-	text-align: center;
-}
-
-#header-image {
+.header-image {
 	// position: absolute;
 	width: 100%;
 	height: $header-image-height;
 	max-width: 1600px;
 	// height: 600px;
 	margin: auto;
-	background: url(../../assets/images/headers/15.jpg) center;
+	margin-top: $navbar-size;
+	text-align: center;
+	background: $baby-blue url(../../assets/images/headers/15.jpg) center;
 	background-size: cover;
-	h1 {
+	.text {
 		padding-top: ($header-image-height - $content-overlap) / 2;
-		color: white;
-		text-shadow: 0 0 8px rgba(black, 0.8);
-		font-size: 60px;
+		h1 {
+			display: inline-block;
+			// padding: 10px;
+			// background: rgba(black, 0.2);
+			color: white;
+			text-shadow: 0 0 8px rgba(black, 0.8);
+			font-size: 80px;
+		}
 	}
+}
+
+.header-image + #content-wrapper {
+	margin-top: -$content-overlap;
 }
 
 #navbar-wrapper {
@@ -118,7 +130,7 @@ a:link, a:visited {
 	width: 100%;
 	z-index: 1000;
 	// border-bottom: 4px solid black;
-	box-shadow: 0 4px 3px rgba(black, 0.5);
+	box-shadow: 0 4px 3px rgba(black, 0.1);
 }
 
 .navbar {
@@ -185,12 +197,43 @@ a:link, a:visited {
 	}
 }
 
-.treats-page {
+.flavors-page {
 	.item {
+		@include clearfix;
+		margin: 30px auto;
 		img {
-			border-radius: 50%;
+			border-radius: 10px;
+			border: 2px solid black;
 			width: 100px;
 			height: 100px;
+			float: left;
+			margin: 0 20px 20px 0;
+		}
+		.info {
+			margin-left: 120px;
+		}
+		.name {
+			font-size: 30px;
+			margin: 0 auto 10px;
+		}
+		.description {
+			margin: 10px auto;
+			font-size: 1.25em;
+		}
+		.ingredients {
+			// clear: both;
+		}
+	}
+	.footnotes {
+		color: $pink;
+		font-size: 1.25em;
+		text-align: right;
+		.star {
+			font-weight: 300;
+			font-size: 40px;
+			line-height: 1px;
+			vertical-align: middle;
+			// display: inline-block;
 		}
 	}
 }
