@@ -10,7 +10,8 @@ mixin header-image(text, image)
 
 mixin flavor(name, image)
 	.item.col-md-6
-		img(src=image)
+		.image
+			img(src=image)
 		.info
 			h2.name= name
 			block

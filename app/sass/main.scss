@@ -1,216 +1,87 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700);
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700);
 
 @import "compass/utilities/general/clearfix";
 @import "compass/css3";
 
+$break-lg: 1200px;
+$break-md: 992px;
+$break-sm: 768px;
+
 $pink: #f06593;
 $baby-blue: #c2e5f4;
+$baby-baby-blue: #d0eaf4;
 
 $width-constraint: 1600px;
 $navbar-size: 60px;
 $navbar-margin: 10px;
-$content-overlap: 50px;
-$header-image-height: 300px;
+$content-overlap-small: 15px;
+$content-overlap-large: 50px;
+$header-image-height-small: 100px;
+$header-image-height-large: 300px;
 
-html,body {
-	font-family: 'Quattrocento Sans', Georgia, sans-serif;
-	height: 100%;
-	// background: rgba($baby-blue, 0.5);
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $break-sm) { @content; }
+  }
+  @else if $media == non-mobile {
+    @media only screen and (min-width: $break-sm + 1) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $break-sm + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $break-md) { @content; }
+  }
+  @else if $media == cinema {
+    @media only screen and (min-width: $break-lg) { @content; }
+  }
 }
 
-img {
-	max-width: 100%;
-}
+@import '_global';
+@import '_navbar';
 
-#outer-limits {
-	background: white url(../../assets/images/bg-paisley.png) center;
-	max-width: $width-constraint;
-	margin: auto;
-	min-height: 100%;
-}
-
-.contrained {
-	max-width: $width-constraint;
-}
-
-h1, h2, h3, h3 {
-	font-family: 'Josefin Slab', Georgia, sans-serif;
-}
-
-a:link, a:visited {
-	@include single-transition(all, 250ms);
-}
-
-#logo-watermark {
-	position: absolute;
-	top: -150px;
-	right: -200px;
-	opacity: 0.05;
-	background: url(../../assets/images/logo.png) no-repeat;
-	width: 800px;
-	height: 800px;
-}
-
-#content-wrapper {
-	@include clearfix;
-	padding-bottom: 180px;
-	margin-top: $navbar-size;
-}
-
-.content-block {
-	background: rgba(white, 0.98);
-	padding: 50px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.pink { color: $pink; }
-
-.biglogo {
+.home-page {
+	padding: 50px 0;
 	text-align: center;
 
-	img {
-		width: 400px;
-		min-width: 300px;
-		max-width: 80%;
-	}
-}
-
-#background-wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
-}
-
-#big-image {
-	width: 100%;
-	height: 100%;
-	max-width: 1600px;
-	// height: 600px;
-	margin: auto;
-	background: url(../../assets/images/headers/15.jpg) center;
-	background-size: cover;
-}
-
-.header-image {
-	// position: absolute;
-	width: 100%;
-	height: $header-image-height;
-	max-width: 1600px;
-	// height: 600px;
-	margin: auto;
-	margin-top: $navbar-size;
-	text-align: center;
-	background: $baby-blue url(../../assets/images/headers/15.jpg) center;
-	background-size: cover;
-	.text {
-		padding-top: ($header-image-height - $content-overlap) / 2;
-		h1 {
-			display: inline-block;
-			// padding: 10px;
-			// background: rgba(black, 0.2);
-			color: white;
-			text-shadow: 0 0 8px rgba(black, 0.8);
-			font-size: 80px;
-		}
-	}
-}
-
-.header-image + #content-wrapper {
-	margin-top: -$content-overlap;
-}
-
-#navbar-wrapper {
-	background: white;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-	// border-bottom: 4px solid black;
-	box-shadow: 0 4px 3px rgba(black, 0.1);
-}
-
-.navbar {
-	$size: $navbar-size - $navbar-margin*2;
-	@include clearfix;
-
-	font-family: 'Josefin Sans', Georgia, sans-serif;
-	margin: $navbar-margin auto;
-	height: $size;
-	position: relative;
-
-	ul.links {
-		padding: 0;
-		list-style: none;
-		margin-left: 380px;
-		display: block;
-		text-align: right;
-		// display: inline-block;
+	.big-stamp {
+		max-height: 400px;
 	}
 
-	li {
-		display: inline-block;
-		// border-left: 4px solid $pink;
-		a {
-			font-size: 32px;
-			font-weight: normal;
-			padding: 0px $navbar-margin;
-			color: black;
-			vertical-align: middle;
-			&:hover {
-				text-decoration: none;
-				// background: $pink;
-				color: $pink;
-				// color: white;
+	.image-grid {
+		margin: 30px auto;
+		img {
+			width: 31%;
+			height: 31%;
+			margin: 0.5%;
+			height: auto;
+			&.photo {
+				// border: 3px solid black;
+				// border-radius: 15%;
+			}
+			&.stamp {
+				padding: 2%;
+				border: 2% solid black;
 			}
 		}
-		&:first-child:before {
-			border-left: none;
-			content: "";
-		}
-	}
-
-	li:before {
-		display: inline-block;
-		content: "•";
-		color: $pink;
-		font-size: 36px;
-		vertical-align: middle;
-	}
-
-	.logo {
-		height: $size;
-		float: left;
-		vertical-align: middle;
-		// position: absolute;
-		// top: 0;
-		// left: 0;
-	}
-	.left {
-		float: left;
-	}
-	.right {
-		float: right;
 	}
 }
 
 .flavors-page {
+	$image-size: 130px;
 	.item {
 		@include clearfix;
-		margin: 30px auto;
-		img {
-			border-radius: 10px;
-			border: 2px solid black;
-			width: 100px;
-			height: 100px;
-			float: left;
-			margin: 0 20px 20px 0;
-		}
-		.info {
-			margin-left: 120px;
+		margin: 30px auto 50px;
+		.image {
+			text-align: center;
+			img {
+				border-radius: 10px;
+				border: 2px solid black;
+				margin: 0 auto 20px;
+				max-height: 200px;
+			}
 		}
 		.name {
 			font-size: 30px;
@@ -222,6 +93,21 @@ a:link, a:visited {
 		}
 		.ingredients {
 			// clear: both;
+		}
+		@include respond-to(non-mobile) {
+
+			.info {
+				// margin-left: $image-size + 20;
+			}
+			.image {
+				padding: 0;
+				img {
+					float: right;
+					margin: 0 20px 20px 0;
+					width: $image-size;
+					height: $image-size;
+				}
+			}
 		}
 	}
 	.footnotes {
@@ -235,5 +121,30 @@ a:link, a:visited {
 			vertical-align: middle;
 			// display: inline-block;
 		}
+	}
+}
+
+.story-page {
+	@include clearfix;
+	.photo {
+		max-width: 33%;
+		float: right;
+		margin: 0 0 30px 30px;
+	}
+	p {
+		text-align: justify;
+	}
+}
+
+.footer {
+	padding: 60px 0;
+	background: white;
+	text-align: center;
+	color: #777;
+	background: rgba($baby-baby-blue, 0.95);
+	border-top: 10px solid $baby-baby-blue;
+
+	.footer-stamp {
+		margin: 30px auto 60px;
 	}
 }

@@ -5,20 +5,22 @@ html
 	head
 		title kilikina's chocolat
 
-		link(rel="stylesheet", type="text/css", href="/assets/vendor/lodash/dist/lodash.min.js")
-		link(rel="stylesheet", type="text/css", href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css")
-		link(rel="stylesheet", type="text/css", href="/assets/vendor/nivo-slider/nivo-slider.css")
-		link(rel="stylesheet", type="text/css", href="/assets/vendor/nivo-slider/themes/default/default.css")
+		meta(name="viewport", content="initial-scale= 1, width=device-width")
 
-		link(rel="stylesheet", type="text/css", href="/assets/styles/main.css")
-		//- link(rel="stylesheet", type="text/css", href="/assets/vendor/jquery/jquery.min.js")
+		link(rel="stylesheet", type="text/css", href="assets/vendor/lodash/dist/lodash.min.js")
+		link(rel="stylesheet", type="text/css", href="assets/vendor/bootstrap/dist/css/bootstrap.min.css")
+		link(rel="stylesheet", type="text/css", href="assets/vendor/nivo-slider/nivo-slider.css")
+		link(rel="stylesheet", type="text/css", href="assets/vendor/nivo-slider/themes/default/default.css")
 
-		script(type="text/javascript", src="/assets/vendor/jquery/jquery.min.js")
-		script(type="text/javascript", src="/assets/vendor/photoset-grid/jquery.photoset-grid.js")
-		script(type="text/javascript", src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js")
-		script(type="text/javascript", src="/assets/vendor/nivo-slider/jquery.nivo.slider.pack.js")
+		link(rel="stylesheet", type="text/css", href="assets/styles/main.css")
+		//- link(rel="stylesheet", type="text/css", href="assets/vendor/jquery/jquery.min.js")
 
-		script(type="text/javascript", src="/assets/scripts/main.js")
+		script(type="text/javascript", src="assets/vendor/jquery/jquery.min.js")
+		script(type="text/javascript", src="assets/vendor/photoset-grid/jquery.photoset-grid.js")
+		script(type="text/javascript", src="assets/vendor/bootstrap/dist/js/bootstrap.min.js")
+		script(type="text/javascript", src="assets/vendor/nivo-slider/jquery.nivo.slider.pack.js")
+
+		script(type="text/javascript", src="assets/scripts/main.js")
 
 	body
 		//- #logo-watermark
@@ -32,10 +34,23 @@ html
 				.container
 					include ../modules/navbar
 
-		#outer-limits
-			block header-image
-				//- +header-image
+		#body-wrapper
+			block raw-content
+				#outer-limits
+					block header-image
+						//- +header-image
 
-			#content-wrapper
-				block content
+					#content-wrapper
+						block content
 
+					#footer-wrapper
+						block footer
+							.footer
+								.container
+									.row
+										.col.col-md-3
+											p &copy; 2014 Kilikina's Chocolat
+										.col-md-6
+											img.footer-stamp(src="assets/images/stamp.png")
+										.col.col-md-3
+											p site by <a href="http://michaeldougherty.info" target="_blank">michael dougherty</a>

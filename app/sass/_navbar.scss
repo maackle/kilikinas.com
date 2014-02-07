@@ -1,0 +1,91 @@
+
+#navbar-wrapper {
+	background: white;
+	width: 100%;
+	z-index: 1000;
+	// border-bottom: 4px solid black;
+	box-shadow: 0 4px 3px rgba(black, 0.1);
+
+	@include respond-to(non-mobile) {
+		position: fixed;
+		top: 0;
+	}
+}
+
+.navbar {
+	$size: $navbar-size - $navbar-margin*2;
+	@include clearfix;
+
+	text-align: center;
+	font-family: 'Josefin Sans', Georgia, sans-serif;
+	margin: $navbar-margin auto;
+	position: relative;
+
+	ul.links {
+		padding: 0;
+		margin: 8px 0 0;
+		list-style: none;
+		// margin-left: 380px;
+		display: block;
+
+		@include respond-to(non-mobile) {
+			margin: 0;
+			margin-left: 380px;
+			text-align: right;
+			// display: inline-block;
+		}
+	}
+
+	li {
+		display: inline-block;
+
+		a {
+			font-size: 20px;
+			font-weight: normal;
+			padding: 0px $navbar-margin;
+			color: black;
+			vertical-align: middle;
+			&:hover {
+				text-decoration: none;
+				// background: $pink;
+				color: $pink;
+				// color: white;
+			}
+		}
+
+		&:first-child:before {
+			border-left: none;
+			content: "";
+		}
+
+		@include respond-to(non-mobile) {
+			display: inline-block;
+			a {
+				font-size: 32px;
+			}
+		}
+	}
+
+	li:before {
+		display: inline;
+		line-height: 1px;
+		content: "•";
+		color: $pink;
+		font-size: 36px;
+		vertical-align: middle;
+	}
+
+	.logo {
+		display: block;
+		vertical-align: middle;
+
+		img {
+			height: $size;
+		}
+		
+		@include respond-to(non-mobile) {
+			float: left;
+		}
+
+	}
+}

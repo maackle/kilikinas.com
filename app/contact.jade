@@ -1,6 +1,10 @@
 extends layout/_base
 
+block header-image
+	+header-image("contact", "assets/images/headers/26.jpg")
+
 block content
-	.container
-		.story-page
-			h1 contact
+	+content-block
+		h1 order chocolat
+		hr
+		h1 contact
