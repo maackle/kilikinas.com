@@ -1,36 +1,8 @@
 
-.home-page {
-	padding: 50px 0;
-	text-align: center;
-	background: white;
-
-	.big-stamp {
-		max-height: 400px;
-	}
-
-	.image-grid {
-		margin: 30px auto;
-		img {
-			width: 31%;
-			height: 31%;
-			margin: 0.5%;
-			height: auto;
-			&.photo {
-				// border: 3px solid black;
-				// border-radius: 15%;
-			}
-			&.stamp {
-				padding: 2%;
-				border: 2% solid black;
-			}
-		}
-	}
-}
-
 #fullscreen-slides {
-	position: fixed;
-	top: 0;
-	left: 0;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
 	width: 100%;
 	height: 100%;
 

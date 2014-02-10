@@ -18,12 +18,19 @@
 	}
 }
 
-body.page-index #navbar-wrapper {
-	position: fixed;
-	top: 5%;
-	opacity: 0.75;
-	&:hover {
-		opacity: 1;
+body.page-index {
+
+	#body-wrapper {
+		margin: 0;
+	}
+
+	#navbar-wrapper {
+		position: fixed;
+		top: 5%;
+		opacity: 0.75;
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 

@@ -36,7 +36,7 @@ html
 					if($(window).width() < 768)
 						return 0;
 					else
-						return $('#navbar-wrapper').height();
+						return $('#navbar-wrapper').height() || 0;
 				}
 
 				function scrollTo(selector) {
@@ -47,7 +47,14 @@ html
 				}
 
 				$('a[href]').click( function(e) {
-					scrollTo($(this).attr('href'));
+					var sel = $(this).attr('href');
+					if($(sel).is(':visible')) {
+						scrollTo(sel);
+					}
+					else {
+						$(sel).show();
+						$(this).trigger('click');
+					}
 					return false;
 				})
 			});

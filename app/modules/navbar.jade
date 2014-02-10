@@ -13,9 +13,9 @@
 		li 
 			a(href="order.html") order
 		li.icon
-			if bodyClass == 'page-index'
-				a(href="/order.html#contact")
-					span.icon-fontawesome-webfont-1
-			else
-				a(href="#contact")
-					span.icon-fontawesome-webfont-1
+			//- if false || bodyClass == 'page-index'
+			//- 	a(href="/order.html#contact")
+			//- 		span.icon-fontawesome-webfont-1
+			//- else
+			a.contact-anchor(href="#contact")
+				span.icon-fontawesome-webfont-1
