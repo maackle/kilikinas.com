@@ -1,6 +1,8 @@
 
-html,body {
+html, body, p {
 	font-family: 'Quattrocento Sans', Georgia, sans-serif;
+}
+html,body {
 	font-size: 16px;
 	height: 100%;
 	// background: rgba($baby-blue, 0.5);
@@ -10,6 +12,21 @@ img {
 	max-width: 100%;
 }
 
+.intro {
+	font-size: 1.33em;
+}
+
+a {
+	h1 {
+		margin: 0;
+	}
+}
+
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+.bg-rosy { background: $rosy; }
+
 #outer-limits {
 	background: $baby-baby-blue url(../../assets/images/bg-paisley-alpha.png) center;
 	max-width: $width-constraint;
@@ -17,7 +34,7 @@ img {
 	min-height: 100%;
 }
 
-.contrained {
+.constrained {
 	max-width: $width-constraint;
 }
 
@@ -26,10 +43,10 @@ h1, h2, h3, h3 {
 }
 
 a:link, a:visited {
-	@include single-transition(all, 250ms);
-	color: $pink;
+	@include single-transition(color, 250ms);
+	color: $link-color;
 	&:hover {
-		color: $pink;
+		color: $link-color-hover;
 	}
 }
 
@@ -105,6 +122,64 @@ a:link, a:visited {
 	}
 }
 
+
+.footer {
+	$text-color: #222;
+	color: $text-color;
+	background: $baby-baby-blue;
+	border-top: 1px dashed white;
+	font-size: 20px;
+
+	a.black {
+		color: $text-color;
+		&:hover {
+			text-decoration: none;
+			color: $blue;
+		}
+	}
+
+	.col {
+		padding: 40px 20px;
+	}
+
+	.info {
+		// background: #ddd;
+		padding: 30px;
+	}
+	.stamp {
+		padding: 60px 0;
+		text-align: center;
+	}
+	.icon {
+		display: inline-block;
+		margin: 0 8px;
+		font-size: 1.2em;
+		vertical-align: middle;
+	}
+
+	.footer-stamp {
+		margin: 60px auto 120px;
+		opacity: 0.8;
+	}
+}
+
+#contact-tab {
+	$height: 50px;
+	font-size: 30px;
+	height: $height;
+	width: $height;
+	text-align: center;
+	line-height: $height;
+	position: absolute;
+	right: 0;
+	bottom: -$height;
+	z-index: 500;
+	border-radius: 0 0 0 10px;
+	background: white;
+	a {
+		color: black;
+	}
+}
 
 @media screen and (min-width: $break-sm) {
 	#body-wrapper {

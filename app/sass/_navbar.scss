@@ -8,8 +8,13 @@
 
 	@include respond-to(non-mobile) {
 		position: fixed;
-		top: 0;
+		top: 0px;
 	}
+}
+
+body.page-index #navbar-wrapper {
+	position: fixed;
+	top: 5%;
 }
 
 .navbar {
@@ -21,12 +26,29 @@
 	margin: $navbar-margin auto;
 	position: relative;
 
+	.logo {
+		display: block;
+		vertical-align: middle;
+
+		img {
+			height: $size;
+		}
+		
+		@include respond-to(non-mobile) {
+			float: left;
+		}
+		@include respond-to(tablet) {
+			float: none;
+			text-align: center;
+		}
+	}
+
 	ul.links {
 		padding: 0;
 		margin: 8px 0 0;
 		list-style: none;
-		// margin-left: 380px;
 		display: block;
+		vertical-align: middle;
 
 		@include respond-to(non-mobile) {
 			margin: 0;
@@ -34,10 +56,18 @@
 			text-align: right;
 			// display: inline-block;
 		}
+
+		@include respond-to(tablet) {
+			display: inline-block;
+			margin-left: 0;	
+			text-align: left;
+		}
+
 	}
 
 	li {
 		display: inline-block;
+		line-height: $size;
 
 		a {
 			font-size: 20px;
@@ -58,8 +88,22 @@
 			content: "";
 		}
 
+		&.icon span::before { // the icon
+			vertical-align: middle;
+		}
+
 		@include respond-to(non-mobile) {
 			display: inline-block;
+			a {
+				font-size: 32px;
+			}
+		}
+		@include respond-to(desktop) {
+			a {
+				font-size: 28px;
+			}
+		}
+		@include respond-to(cinema) {
 			a {
 				font-size: 32px;
 			}
@@ -75,17 +119,4 @@
 		vertical-align: middle;
 	}
 
-	.logo {
-		display: block;
-		vertical-align: middle;
-
-		img {
-			height: $size;
-		}
-		
-		@include respond-to(non-mobile) {
-			float: left;
-		}
-
-	}
 }

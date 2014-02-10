@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "kilikinascom";
+  src:url("fonts/kilikinascom.eot");
+  src:url("fonts/kilikinascom.eot?#iefix") format("embedded-opentype"),
+    url("fonts/kilikinascom.woff") format("woff"),
+    url("fonts/kilikinascom.ttf") format("truetype"),
+    url("fonts/kilikinascom.svg#kilikinascom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "kilikinascom" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "kilikinascom" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook-squared:before {
+  content: "b";
+}
+.icon-twitter:before {
+  content: "c";
+}
+.icon-fontawesome-webfont:before {
+  content: "a";
+}
+.icon-phone:before {
+  content: "d";
+}
+.icon-fontawesome-webfont-1:before {
+  content: "e";
+}

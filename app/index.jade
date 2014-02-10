@@ -1,17 +1,33 @@
 extends layout/_base
 
+block vars
+	- var bodyClass = 'page-index'
+
+block head
+	script.
+
+		$( function() {
+			$('.superslides').superslides({
+				play: 5000,
+				animation: 'fade',
+				animation_speed: 2000,
+			});
+		});
+
 block raw-content
 	.home-page
-		.container
-			img.big-stamp(src="assets/images/stamp.png")
-			.image-grid
-				img.photo(src="assets/images/grid/16.jpg")
-				img.photo(src="assets/images/grid/cacao-elixir.jpg")
-				img.photo(src="assets/images/flavors/poo-poo.jpg")
-				img.photo(src="assets/images/flavors/goji-heart.jpg")
-				//- img.stamp(src="assets/images/grid/stamp.jpg")
-				img.photo(src="assets/images/grid/36.jpg")
-				img.photo(src="assets/images/flavors/lavender-rose.jpg")
-				img.photo(src="assets/images/flavors/maca-cream-delight.jpg")
-				img.photo(src="assets/images/flavors/chunks.jpg")
-				img.photo(src="assets/images/grid/23.jpg")
+		#fullscreen-slides
+			.superslides
+				.slides-container
+					img.photo(src="assets/images/grid/16.jpg")
+					img.photo(src="assets/images/grid/cacao-elixir.jpg")
+					img.photo(src="assets/images/flavors/poo-poo.jpg")
+					img.photo(src="assets/images/flavors/goji-heart.jpg")
+					//- img.stamp(src="assets/images/grid/stamp.jpg")
+					img.photo(src="assets/images/grid/36.jpg")
+					img.photo(src="assets/images/flavors/lavender-rose.jpg")
+					img.photo(src="assets/images/flavors/maca-cream-delight.jpg")
+					img.photo(src="assets/images/flavors/chunks.jpg")
+					img.photo(src="assets/images/grid/23.jpg")
+			
+			//- img.stamp(src="assets/images/stamp-stroke.png")

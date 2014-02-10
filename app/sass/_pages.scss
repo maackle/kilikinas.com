@@ -1,0 +1,150 @@
+
+.home-page {
+	padding: 50px 0;
+	text-align: center;
+	background: white;
+
+	.big-stamp {
+		max-height: 400px;
+	}
+
+	.image-grid {
+		margin: 30px auto;
+		img {
+			width: 31%;
+			height: 31%;
+			margin: 0.5%;
+			height: auto;
+			&.photo {
+				// border: 3px solid black;
+				// border-radius: 15%;
+			}
+			&.stamp {
+				padding: 2%;
+				border: 2% solid black;
+			}
+		}
+	}
+}
+
+#fullscreen-slides {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	.stamp {
+		z-index: 1000;
+		max-height: 50%;
+		max-width: 50%;
+		position: absolute;
+		top: 100px;
+		left: 30px;
+	}
+}
+
+.flavors-page {
+	$image-size: 130px;
+	.item {
+		@include clearfix;
+		margin: 30px auto 50px;
+		.image {
+			text-align: center;
+			margin: 0 auto 20px;
+			img {
+				// border-radius: 10px;
+				border: 2px solid black;
+				max-height: 200px;
+			}
+		}
+		.name {
+			text-align: left;
+			font-size: 30px;
+			margin: 0 auto 10px;
+		}
+		.description {
+			margin: 10px auto;
+			font-size: 1.25em;
+		}
+		.ingredients {
+			// clear: both;
+		}
+		@include respond-to(non-mobile) {
+			// &.left {
+			// 	.info {
+			// 		margin: 0;
+			// 		margin-left: $image-size + 30;
+			// 	}
+			// 	.image {
+			// 		float: left;
+			// 	}
+			// }
+			.info {
+				margin-left: $image-size + 30;
+				text-align: justify;
+			}
+			.image {
+				padding: 0;
+				float: left;
+				img {
+					// margin: 0 30px 20px 30px;
+					width: $image-size;
+					height: $image-size;
+				}
+			}
+		}
+	}
+	.footnotes {
+		color: $pink;
+		font-size: 1.25em;
+		text-align: right;
+		.star {
+			font-weight: 300;
+			font-size: 40px;
+			line-height: 1px;
+			vertical-align: middle;
+			// display: inline-block;
+		}
+	}
+}
+
+.story-page {
+	@include clearfix;
+	.photo {
+		max-width: 33%;
+		float: right;
+		margin: 0 0 30px 30px;
+	}
+	p {
+		text-align: justify;
+	}
+}
+
+
+.squareup-embeds {
+	padding: 30px 0;
+	.item {
+		margin: 30px auto;
+	}
+}
+
+.order-page {
+	.order-by {
+		.block {
+			display: inline-block;
+			margin: 0 20px;
+			padding: 5px 10px;
+		}
+		.local {
+			border-bottom: 2px solid $pink;
+		}
+		.anywhere {
+			border-bottom: 2px solid $blue;
+		}
+		.date {
+			font-size: 1.5em;
+		}
+	}
+}
+

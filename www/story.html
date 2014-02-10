@@ -1,4 +1,26 @@
-<!DOCTYPE html><html><head><title>kilikina's chocolat</title><meta name="viewport" content="initial-scale= 1, width=device-width"><link rel="stylesheet" type="text/css" href="assets/vendor/lodash/dist/lodash.min.js"><link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="assets/vendor/nivo-slider/nivo-slider.css"><link rel="stylesheet" type="text/css" href="assets/vendor/nivo-slider/themes/default/default.css"><link rel="stylesheet" type="text/css" href="assets/styles/main.css"><script type="text/javascript" src="assets/vendor/jquery/jquery.min.js"></script><script type="text/javascript" src="assets/vendor/photoset-grid/jquery.photoset-grid.js"></script><script type="text/javascript" src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script><script type="text/javascript" src="assets/vendor/nivo-slider/jquery.nivo.slider.pack.js"></script><script type="text/javascript" src="assets/scripts/main.js"></script></head><body><div id="navbar-wrapper"><div class="container"><div class="navbar"><a href="index.html" class="logo"><img src="assets/images/logo-pink.png"></a><ul class="links"><li><a href="flavors.html">flavors </a></li><li><a href="story.html">story</a></li><li><a href="contact.html">contact</a></li></ul></div></div></div><div id="body-wrapper"><div id="outer-limits"><div style="background-image: url(assets/images/headers/15.jpg)" class="header-image"><div class="text"><h1>kilikina's story</h1></div></div><div id="content-wrapper"><div class="container"><div class="content-block"><div class="story-page"><img src="assets/images/kristina-1.jpg" class="photo"><h1>Kilikina's Story</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+<!DOCTYPE html><html><head><title>kilikina's chocolat</title><meta name="viewport" content="initial-scale= 1, width=device-width"><link rel="stylesheet" type="text/css" href="assets/vendor/lodash/dist/lodash.min.js"><link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="assets/vendor/nivo-slider/nivo-slider.css"><link rel="stylesheet" type="text/css" href="assets/vendor/nivo-slider/themes/default/default.css"><link rel="stylesheet" type="text/css" href="assets/vendor/superslides/stylesheets/superslides.css"><link rel="stylesheet" type="text/css" href="assets/fontastic/styles.css"><link rel="stylesheet" type="text/css" href="assets/styles/main.css"><script type="text/javascript" src="assets/vendor/jquery/jquery.min.js"></script><script type="text/javascript" src="assets/vendor/photoset-grid/jquery.photoset-grid.js"></script><script type="text/javascript" src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script><script type="text/javascript" src="assets/vendor/nivo-slider/jquery.nivo.slider.pack.js"></script><script type="text/javascript" src="assets/vendor/superslides/jquery.superslides.js"></script><script type="text/javascript" src="assets/scripts/main.js"></script><script>$( function() {
+
+ function navHeight() {
+  if($(window).width() < 768)
+   return 0;
+  else
+   return $('#navbar-wrapper').height();
+ }
+ 
+ function scrollTo(selector) {
+  y = $(selector).offset().top - navHeight();
+  $('html, body').animate({
+   scrollTop: y
+  });
+ }
+ 
+ $('a[href]').click( function(e) {
+  scrollTo($(this).attr('href'));
+  return false;
+ })
+});
+
+</script></head><body><div id="navbar-wrapper"><div class="container"><div class="navbar"><a href="index.html" class="logo"><h1><img src="assets/images/logo-pink.png" alt="Kilikina's Chocolat"></h1></a><ul class="links"><li><a href="flavors.html">bodyworks </a></li><li><a href="flavors.html">flavors </a></li><li><a href="story.html">story</a></li><li><a href="order.html">order</a></li><li class="icon"><a href="#contact"><span class="icon-fontawesome-webfont-1"></span></a></li></ul></div></div></div><div id="body-wrapper"><div id="outer-limits"><div style="background-image: url(assets/images/headers/15.jpg)" class="header-image"><div class="text"><h1>kilikina's story</h1></div></div><div id="content-wrapper"><div class="container"><div class="content-block"><div class="story-page"><img src="assets/images/kristina-1.jpg" class="photo"><h1>Kilikina's Story</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -13,4 +35,5 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div></div></div></div><div id="footer-wrapper"><div class="footer"><div class="container"><div class="row"><div class="col col-md-3"><p>&copy; 2014 Kilikina's Chocolat</p></div><div class="col-md-6"><img src="assets/images/stamp.png" class="footer-stamp"></div><div class="col col-md-3"><p>site by <a href="http://michaeldougherty.info" target="_blank">michael dougherty</a></p></div></div></div></div></div></div></div></body></html>
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div></div></div></div><div id="footer-wrapper"><div class="footer"><div id="contact" class="container"><div class="row"><div class="col col-sm-6"><h1>Contact</h1><div class="email"><a href="mailto:kristina@kilikinas.com" class="black"><span class="icon icon-fontawesome-webfont"></span>kristina@kilikinas.com</a></div><div class="facebook"><a href="http://facebook.com/kilikinas" target="_blank" class="black"><span class="icon icon-facebook-squared"></span>facebook.com/Kilikinas</a></div></div><div class="col col-sm-6 align-right"><h1 class="logo"><img src="assets/images/logo-black.png" alt="Kilikina's Chocolat"></h1><p>&copy; 
+2014 Kilikina's Chocolat</p><p>site by <a href="http://michaeldougherty.info" target="_blank">michael dougherty</a></p></div></div><div class="align-center"><img src="assets/images/stamp.png" class="footer-stamp"></div></div></div></div></div></div></body></html>

@@ -1,5 +1,7 @@
 include mixins
 
+block vars
+
 doctype html
 html
 	head
@@ -11,6 +13,8 @@ html
 		link(rel="stylesheet", type="text/css", href="assets/vendor/bootstrap/dist/css/bootstrap.min.css")
 		link(rel="stylesheet", type="text/css", href="assets/vendor/nivo-slider/nivo-slider.css")
 		link(rel="stylesheet", type="text/css", href="assets/vendor/nivo-slider/themes/default/default.css")
+		link(rel="stylesheet", type="text/css", href="assets/vendor/superslides/stylesheets/superslides.css")
+		link(rel="stylesheet", type="text/css", href="assets/fontastic/styles.css")
 
 		link(rel="stylesheet", type="text/css", href="assets/styles/main.css")
 		//- link(rel="stylesheet", type="text/css", href="assets/vendor/jquery/jquery.min.js")
@@ -19,10 +23,39 @@ html
 		script(type="text/javascript", src="assets/vendor/photoset-grid/jquery.photoset-grid.js")
 		script(type="text/javascript", src="assets/vendor/bootstrap/dist/js/bootstrap.min.js")
 		script(type="text/javascript", src="assets/vendor/nivo-slider/jquery.nivo.slider.pack.js")
+		script(type="text/javascript", src="assets/vendor/superslides/jquery.superslides.js")
 
 		script(type="text/javascript", src="assets/scripts/main.js")
 
-	body
+		script.
+
+
+			$( function() {
+
+				function navHeight() {
+					if($(window).width() < 768)
+						return 0;
+					else
+						return $('#navbar-wrapper').height();
+				}
+
+				function scrollTo(selector) {
+					y = $(selector).offset().top - navHeight();
+					$('html, body').animate({
+						scrollTop: y
+					});
+				}
+
+				$('a[href]').click( function(e) {
+					scrollTo($(this).attr('href'));
+					return false;
+				})
+			});
+
+
+		block head
+
+	body(class=bodyClass)
 		//- #logo-watermark
 		//- .constrained
 		//- 	block big-image
@@ -33,6 +66,11 @@ html
 			block navbar
 				.container
 					include ../modules/navbar
+
+			//- block contact-tab
+			//- 	#contact-tab
+			//- 		a(href="#contact") 
+			//- 			span.icon-phone
 
 		#body-wrapper
 			block raw-content
@@ -45,12 +83,5 @@ html
 
 					#footer-wrapper
 						block footer
-							.footer
-								.container
-									.row
-										.col.col-md-3
-											p &copy; 2014 Kilikina's Chocolat
-										.col-md-6
-											img.footer-stamp(src="assets/images/stamp.png")
-										.col.col-md-3
-											p site by <a href="http://michaeldougherty.info" target="_blank">michael dougherty</a>
+							include ../modules/footer
+		
