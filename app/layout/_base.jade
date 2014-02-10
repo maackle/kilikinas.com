@@ -36,7 +36,7 @@ html
 					if($(window).width() < 768)
 						return 0;
 					else
-						return $('#navbar-wrapper').height() || 0;
+						return $('#navbar-wrapper').offset().top + $('#navbar-wrapper').height() || 0;
 				}
 
 				function scrollTo(selector) {
