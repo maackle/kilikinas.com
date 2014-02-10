@@ -1,11 +1,14 @@
 extends layout/_base
 
 block header-image
-	+header-image("flavors", "assets/images/headers/choco-bar.jpg")
+	+header-image("chocolat", "assets/images/headers/choco-bar.jpg")
 
 block content
 	+content-block
 		.flavors-page
+			.intro
+				p Say something about chocolate up here.
+			h1.baby-blue-line Flavors
 			.row
 				+flavor('Maca "Cream" Delight', "assets/images/flavors/maca-cream-delight.jpg")
 					.description A heavenly sandwich of chocolate and creamy maca-coconut butter filling
