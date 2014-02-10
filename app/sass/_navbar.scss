@@ -25,11 +25,16 @@ body.page-index {
 	}
 
 	#navbar-wrapper {
-		position: fixed;
-		top: 5%;
+		position: absolute;
+		top: 60px;
 		opacity: 0.75;
 		&:hover {
 			opacity: 1;
+		}
+
+		@include respond-to(non-mobile) {
+			position: fixed;
+			top: 60px;
 		}
 	}
 }

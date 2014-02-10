@@ -4,10 +4,11 @@
   if($(window).width() < 768)
    return 0;
   else
-   return $('#navbar-wrapper').offset().top + $('#navbar-wrapper').height() || 0;
+   return $('#navbar-wrapper').position().top + $('#navbar-wrapper').height() || 0;
  }
  
  function scrollTo(selector) {
+  console.log(navHeight());
   y = $(selector).offset().top - navHeight();
   $('html, body').animate({
    scrollTop: y
