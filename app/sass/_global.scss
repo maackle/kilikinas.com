@@ -129,6 +129,28 @@ a:link, a:visited {
 	}
 }
 
+.story-box {
+	min-height: 400px;
+	&.field {
+		background: url(../../assets/images/story/kristina-field.jpg) top center;
+		background-size: cover;
+		p {
+			line-height: 1.5em;
+			color: yellow;
+			// background: rgba(white, 0.8);
+			width: 50%;
+			padding: 50px 30px;
+			// margin: 50px;
+		}
+	}
+
+	p {
+		font-family: Sofia;
+		text-align: left !important;
+		font-size: 1.5em;
+	}
+}
+
 a.order-callout {
 	@include transition(color 300ms, background 300ms);
 	display: block;
