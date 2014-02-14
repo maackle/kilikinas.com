@@ -83,6 +83,17 @@ a:link, a:visited {
 	}
 }
 
+.pink-asterisk:before {
+		display: inline;
+		// margin-right: 15px;
+		// line-height: 1px;
+		content: "*";
+		color: $pink;
+		font-size: 36px;
+		vertical-align: middle;
+
+}
+
 .header-image {
 	// position: absolute;
 	width: 100%;
@@ -118,6 +129,22 @@ a:link, a:visited {
 	}
 }
 
+a.order-callout {
+	@include transition(color 300ms, background 300ms);
+	display: block;
+	text-align: center;
+	padding: 5px;
+	margin: 30px auto;
+	border: 1px solid $pink;
+	background: lighten($pink, 30%);
+	border-width: 1px 0 1px 0;
+	// color: white;
+	&:hover {
+		background: $pink;
+		color: white;
+		text-decoration: none;
+	}
+}
 
 .header-image + #content-wrapper {
 	margin-top: -$content-overlap-small;
@@ -142,6 +169,15 @@ a:link, a:visited {
 		}
 	}
 
+	.attribution a {
+		color: $text-color;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: underline;
+			color: $blue;
+		}
+	}
+
 	.col {
 		padding: 40px 20px;
 	}
@@ -150,10 +186,7 @@ a:link, a:visited {
 		// background: #ddd;
 		padding: 30px;
 	}
-	.stamp {
-		padding: 60px 0;
-		text-align: center;
-	}
+
 	.icon {
 		display: inline-block;
 		margin: 0 8px;
@@ -162,7 +195,7 @@ a:link, a:visited {
 	}
 
 	.footer-stamp {
-		margin: 60px auto 120px;
+		margin: 0 auto;
 		opacity: 0.8;
 	}
 }

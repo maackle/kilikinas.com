@@ -1,21 +1,32 @@
 extends layout/_base
 
 block header-image
-	+header-image("body care", "assets/images/headers/choco-bar.jpg")
+	+header-image("body care", "assets/images/headers/body-cream.jpg")
 
 block content
 	+content-block
 		.bodycare-page
-			//- .row
-			//- 	+flavor('Maca "Cream" Delight', "assets/images/flavors/maca-cream-delight.jpg")
-			//- 		.description A heavenly sandwich of chocolate and creamy maca-coconut butter filling
-			//- 		.ingredients 
-			//- 			| Pacari Ecuadorian cacao &ndash; wildflower honey &ndash; coconut butter &ndash; maca powder &ndash; wildcrafted vanilla bean &ndash; Himalayan pink crystal sea salt
+			h1.baby-blue-line Organic Cacao Body Cream
+			.intro 
+				p Nourish your skin with this soft and decadent organic cacao body cream, filled with essential fatty acids and antioxidants.
+				.row
+					.col.col-sm-6
+						img(src="assets/images/headers/body-cream.jpg", style="margin-bottom: 5px;")
+					.col.col-sm-6
+						img(src="assets/images/doterra-oil.jpg")
+				a(href="order.html").order-callout click to order
+				p
+					span.pink-asterisk
+					| Optionally infused with pure therapeutic grade essential oils:
 
-			//- 	+flavor('Dark Vanilla', "assets/images/flavors/chunks.jpg")
-			//- 		.description Simple and satisfying, the perfect union of cacao and vanilla bean
-			//- 		.ingredients 
-			//- 			| Pacari Ecuadorian cacao &ndash; wildflower honey &ndash; wildcrafted vanilla bean &ndash; Himalayan pink crystal sea salt
+			.row
+				+flavor('Sweet Citrus')
+					.ingredients 
+						| doTERRA essential oils of: Bergamot &ndash; Clementine &ndash; Grapefruit &ndash; Lemon &ndash; Mandarin &ndash; Tangerine &ndash; Vanilla &ndash; Wild Orange
+
+				+flavor('Love')
+					.ingredients 
+						| doTERRA essential oils of: Bergamot &ndash; Cinnamon &ndash; Cistus absolute &ndash; Cocoa bean &ndash; Jasmine absolute &ndash; Patchouli &ndash; Rose absolute &ndash; Sandalwood &ndash; Vanilla bean extract &ndash; Vetiver &ndash; Ylang Ylang 
 			//- .row
 			//- 	+flavor('Lavender Rose', "assets/images/flavors/lavender-rose.jpg")
 			//- 		.description Elegant with soothing floral notes
