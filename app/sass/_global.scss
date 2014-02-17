@@ -5,7 +5,9 @@ html, body, p {
 html,body {
 	font-size: 16px;
 	height: 100%;
-	// background: rgba($baby-blue, 0.5);
+	// background: $baby-baby-blue;
+
+	background: $baby-baby-blue url(../../assets/images/bg-paisley-alpha.png) center;
 }
 
 img {
@@ -22,6 +24,11 @@ a {
 	}
 }
 
+a.anchor {
+	position: relative;
+	top: -($navbar-size);
+}
+
 .baby-blue-line {
 	border-bottom: 2px solid $baby-baby-blue;
 }
@@ -32,7 +39,6 @@ a {
 .bg-rosy { background: $rosy; }
 
 #outer-limits {
-	background: $baby-baby-blue url(../../assets/images/bg-paisley-alpha.png) center;
 	max-width: $width-constraint;
 	margin: auto;
 	min-height: 100%;
@@ -98,7 +104,7 @@ a:link, a:visited {
 	// position: absolute;
 	width: 100%;
 	height: $header-image-height-small;
-	max-width: 1600px;
+	// max-width: 1600px;
 	// height: 600px;
 	margin: auto;
 	// margin-top: $navbar-size;
@@ -166,6 +172,13 @@ a.order-callout {
 		background: $pink;
 		color: white;
 		text-decoration: none;
+	}
+	&.box {
+		margin: auto;
+		display: inline-block;
+		padding: 25px 50px;
+		font-size: 1.5em;
+		border-width: 1px;
 	}
 }
 
@@ -243,7 +256,7 @@ a.order-callout {
 
 @media screen and (min-width: $break-sm) {
 	#body-wrapper {
-		margin-top: $navbar-size + 10;
+		margin-top: $navbar-size + 6;
 	}
 }
 

@@ -1,52 +1,77 @@
 extends layout/_base
 
 block header-image
-	+header-image("order chocolat", "assets/images/headers/26.jpg")
+	+header-image("order", "assets/images/headers/26.jpg")
 
 block content
 	+content-block
 		.order-page
-			//- .align-center
-			//- 	.order-by
-			//- 		h2.pink <span class="pink">Valentine's Day</span> is almost here!
-			//- 		p To receive chocolat in time for Valentine's Day, order by the following dates:
-			//- 		.block.local Anywhere in the US: order by 
-			//- 			span.date 2/9/14
-			//- 		.block.anywhere Local Portland, OR: order by 
-			//- 			span.date 2/12/14
 			.intro 
 				p Please choose your item below. 
 				p For larger or custom orders, please contact us directly at <a href="mailto:kristina@kilikinas.com">kristina@kilikinas.com</a>
 			.squareup-embeds
+				a.anchor(name="chocolat")
+				h1.baby-blue-line Chocolat
 				.row
-					.col-md-4.
-						<div class="item">						
-							<a href="https://squareup.com/market/kilikinas-chocolat/large-box-of-valentine-s-chocolate" class="sq-embed-item"> Large box of 8 pieces (Local Portland, OR) on Square Market</a>
-						</div>
-					.col-md-4.
-						<div class="item">
-							<a href="https://squareup.com/market/kilikinas-chocolat/valentine-s-chocolate-large-box-of-pieces-anywhere-in-the-us-outside-of-portland-or" class="sq-embed-item">Large box of 8 pieces (Anywhere in the US) on Square Market</a>
-						</div>
-					.col-md-4.
-						<div class="item">
-							<a href="https://squareup.com/market/kilikinas-chocolat/raw-chocolate-treats" class="sq-embed-item">Small Box of 4 pieces (Local Portland Only) on Square Market</a>
-						</div>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/large-box-of-valentine-s-chocolate" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/dark-vanilla" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/dark-vanilla-1" class="sq-embed-item"> on Square Market</a>
 				.row
-					.col-md-4.
-						<div class="item">
-							<a href="https://squareup.com/market/kilikinas-chocolat/cacao-body-cream-giveaways-with-valentine-s-orders" class="sq-embed-item">Cacao Body Cream ~ 3 Giveaways with Valentine&#39;s order! on Square Market</a>
-						</div>
-					.col-md-4.
-						<div class="item">
-							<a href="https://squareup.com/market/kilikinas-chocolat/maca-cream-delight-giveaways" class="sq-embed-item">Maca &quot;Cream&quot; Delight ~ 44 Giveaways with Large Valentine&#39;s Order! on Square Market</a>
-						</div>
-					.col-md-4.
-						<div class="item">
-							<a href="https://squareup.com/market/kilikinas-chocolat/maca-cream-delight-local-portland-or" class="sq-embed-item">Maca &quot;Cream&quot; Delight (Local Portland, OR) on Square Market</a>
-						</div>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/goji-heart-1" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/goji-heart" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/hazelnut-kiss" class="sq-embed-item"> on Square Market</a>
 				.row
-					.col-md-4.
-						<div class="item">
-							<a href="https://squareup.com/market/kilikinas-chocolat/maca-cream-delight-local-portland-or-1" class="sq-embed-item">Maca &quot;Cream&quot; Delight (Anywhere in the US) on Square Market</a>
-						</div>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/hazelnut-kiss-1" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/valentine-s-chocolate-large-box-of-pieces-anywhere-in-the-us-outside-of-portland-or" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/lavender-rose-1" class="sq-embed-item"> on Square Market</a>
+						
+				.row
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/lavender-rose" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/maca-cream-delight-local-portland-or" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/maca-cream-delight-local-portland-or-1" class="sq-embed-item"> on Square Market</a>						
+
+				a#bodycare.anchor(name="bodycare")
+				h1.baby-blue-line Body Care
+				.row
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/kilikina-s-cacao-body-cream-local-portland-or" class="sq-embed-item"> on Square Market</a>
+					.col-md-4
+						.item.
+							<a href="https://squareup.com/market/kilikinas-chocolat/cacao-body-cream-giveaways-with-valentine-s-orders" class="sq-embed-item"> on Square Market</a>
 				<script src="https://cdn.sq-api.com/market/embed.js" charset="utf-8"></script>
+
+
+
+
+
+
+
+
+
+
+
