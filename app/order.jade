@@ -6,58 +6,65 @@ block header-image
 block content
 	+content-block
 		.order-page
-			.intro 
-				.location-choices
-					p To make an order in Portland, OR?
-				p Please choose your item below. 
-			.squareup-embeds
-				a.anchor(name="chocolat")
-				h1.baby-blue-line Chocolat
-				#accordion.panel-group
-					.panel.panel-default
-						.panel-heading
-							a(data-toggle="collapse", data-parent="#accordion", href="#local")
-								h1.panel-title Anywhere in the US
-						#local.panel-collapse.collapse
-							.panel-body.local-orders
-								.row
-									+order-item('local', 'large-box-of-valentine-s-chocolate', "Large Box of Valentine's Chocolate")
-									+order-item('local', 'dark-vanilla', 'Dark Vanilla')
-									+order-item('local', 'goji-heart', 'Goji Heart')
-									+order-item('local', 'hazelnut-kiss', 'Hazelnut Kiss')
-								.row
-									+order-item('local', 'lavender-rose', 'Lavender Rose')
-									+order-item('local', 'maca-cream-delight-local-portland-or', 'Maca Cream Delight')
-					.panel.panel-default
-						.panel-heading
-							a(data-toggle="collapse", data-parent="#accordion", href="#anywhere")
-								h1.panel-title Local Portland, OR
-						#anywhere.panel-collapse.collapse
-							.panel-body.anywhere-orders
-								.row
-									+order-item('anywhere', 'large-box-of-valentine-s-chocolate', "Large Box of Valentine's Chocolate")
-									+order-item('anywhere', 'dark-vanilla-1', 'Dark Vanilla')
-									+order-item('anywhere', 'goji-heart-1', 'Goji Heart')
-									+order-item('anywhere', 'hazelnut-kiss-1', 'Hazelnut Kiss')
-								.row
-									+order-item('anywhere', 'lavender-rose-1', 'Lavender Rose')
-									+order-item('anywhere', 'maca-cream-delight-local-portland-or-1', 'Maca Cream Delight')
-					
-
-				a#bodycare.anchor(name="bodycare")
-				h1.baby-blue-line Body Care
+			.location-choices.align-center
+				h2.align-center Please choose one:
 				.row
-					.col-md-4
-						.item.
-							<a href="https://squareup.com/market/kilikinas-chocolat/kilikina-s-cacao-body-cream-local-portland-or" class="sq-embed-item"> on Square Market</a>
-					.col-md-4
-						.item.
-							<a href="https://squareup.com/market/kilikinas-chocolat/cacao-body-cream-giveaways-with-valentine-s-orders" class="sq-embed-item"> on Square Market</a>
-				
-				h1.baby-blue-line Custom Orders
-				p.intro For larger or custom orders, please contact us directly at <a href="mailto:kristina@kilikinas.com">kristina@kilikinas.com</a>
-				
+					.col-sm-6
+						h2.choice.local 
+							| Ordering Local to Portland, OR?
+					.col-sm-6 
+						h2.choice.anywhere 
+							| Ordering Outside of Portland, OR?
+			.squareup-embeds
+				.local-items
+					h1.locale ORDER LOCAL TO PORTLAND, OR 
+						a.reset (change?)
+					
+					p.intro Please choose your item below. 
+
+					a.anchor(name="chocolat")
+					h1.baby-blue-line Chocolat
+					.row
+						+order-item('local', 'large-box-of-valentine-s-chocolate', "Large Box of Valentine's Chocolate")
+						+order-item('local', 'dark-vanilla', 'Dark Vanilla')
+						+order-item('local', 'goji-heart', 'Goji Heart')
+						+order-item('local', 'hazelnut-kiss', 'Hazelnut Kiss')
+					.row
+						+order-item('local', 'lavender-rose', 'Lavender Rose')
+						+order-item('local', 'maca-cream-delight-local-portland-or', 'Maca Cream Delight')
+
+					a.anchor(name="bodycare")
+					h1.baby-blue-line Body Care
+					.row
+						+order-item('local', 'kilikina-s-cacao-body-cream-local-portland-or', 'Cacao Body Cream')
+
+				.anywhere-items
+					h1.locale ORDER ANYWHERE IN THE U.S. 
+						a.reset (change?)
+					
+					p.intro Please choose your item below. 
+					
+					a.anchor(name="chocolat")
+					h1.baby-blue-line Chocolat
+					.row
+						+order-item('anywhere', 'valentine-s-chocolate-large-box-of-pieces-anywhere-in-the-us-outside-of-portland-or', "Large Box of Valentine's Chocolate")
+						+order-item('anywhere', 'dark-vanilla-1', 'Dark Vanilla')
+						+order-item('anywhere', 'goji-heart-1', 'Goji Heart')
+						+order-item('anywhere', 'hazelnut-kiss-1', 'Hazelnut Kiss')
+					.row
+						+order-item('anywhere', 'lavender-rose-1', 'Lavender Rose')
+						+order-item('anywhere', 'maca-cream-delight-local-portland-or-1', 'Maca Cream Delight')
+					
+					a.anchor(name="bodycare")
+					h1.baby-blue-line Body Care
+					.row
+						+order-item('anywhere', 'cacao-body-cream-giveaways-with-valentine-s-orders', 'Cacao Body Cream')
 				<script src="https://cdn.sq-api.com/market/embed.js" charset="utf-8"></script>
+
+				
+			h2.baby-blue-line Custom Orders
+			p.intro For larger or custom orders, please contact us directly at <a href="mailto:kristina@kilikinas.com">kristina@kilikinas.com</a>
+			
 
 
 

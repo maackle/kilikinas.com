@@ -14,6 +14,10 @@ img {
 	max-width: 100%;
 }
 
+.hide {
+	display: none;
+}
+
 .intro {
 	font-size: 1.33em;
 }
@@ -54,6 +58,7 @@ h1, h2, h3, h3 {
 
 a:link, a:visited {
 	@include single-transition(color, 250ms);
+	@include single-transition(background, 250ms);
 	color: $link-color;
 	&:hover {
 		color: $link-color-hover;

@@ -119,5 +119,33 @@
 			font-size: 1.5em;
 		}
 	}
+	h1.locale {
+		padding: 10px;
+		background: $baby-blue;
+		font-weight: bold;
+	}
+	.location-choices {
+		display: none;
+		.row {
+			@include clearfix;
+		}
+		.choice {
+			display: inline-block;
+			cursor: pointer;
+			padding: 30px;
+			margin: 20px auto;
+			background: $baby-baby-blue;
+			color: black;
+			&:hover {
+				background: $blue;
+				color: white;
+			}
+		}
+	}
+	a.reset {
+		color: white;
+		font-size: 0.8em;
+		cursor: pointer;
+	}
 }
 
