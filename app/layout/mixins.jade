@@ -16,3 +16,8 @@ mixin flavor(name, image)
 		.info
 			h2.name= name
 			block
+
+mixin order-item(type, slug, description)
+	.col-md-3(class=type)
+		.item
+			a(href="https://squareup.com/market/kilikinas-chocolat/#{slug}" class="sq-embed-item")= description
