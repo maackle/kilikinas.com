@@ -162,7 +162,7 @@ a.order-callout {
 	@include transition(color 300ms, background 300ms);
 	display: block;
 	text-align: center;
-	padding: 5px;
+	padding: 20px;
 	margin: 30px auto;
 	border: 1px solid $pink;
 	background: lighten($pink, 30%);
@@ -179,6 +179,15 @@ a.order-callout {
 		padding: 25px 50px;
 		font-size: 1.5em;
 		border-width: 1px;
+	}
+	&.full {
+		margin: auto;
+		display: inline-block;
+		padding: 50px 25px;
+		width: 100%;
+		font-size: 1.5em;
+		border-width: 1px;
+		border-width: 0;
 	}
 }
 
