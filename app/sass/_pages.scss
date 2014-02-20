@@ -16,32 +16,36 @@
 	}
 }
 
+.flavor {
+	@include clearfix;
+	margin: 30px auto 30px;
+	.image {
+		text-align: center;
+		margin: 0 auto 20px;
+		img {
+			// border-radius: 10px;
+			border: 2px solid black;
+			max-height: 200px;
+		}
+	}
+	.name {
+		text-align: left;
+		font-size: 30px;
+		margin: 0 auto 10px;
+	}
+	.description {
+		margin: 10px auto;
+		font-size: 1.25em;
+	}
+	.ingredients {
+		// clear: both;
+	}
+	
+}
+
 .flavors-page {
-	$image-size: 130px;
-	.item {
-		@include clearfix;
-		margin: 30px auto 50px;
-		.image {
-			text-align: center;
-			margin: 0 auto 20px;
-			img {
-				// border-radius: 10px;
-				border: 2px solid black;
-				max-height: 200px;
-			}
-		}
-		.name {
-			text-align: left;
-			font-size: 30px;
-			margin: 0 auto 10px;
-		}
-		.description {
-			margin: 10px auto;
-			font-size: 1.25em;
-		}
-		.ingredients {
-			// clear: both;
-		}
+
+	.flavor {
 		@include respond-to(non-mobile) {
 			// &.left {
 			// 	.info {
@@ -53,7 +57,7 @@
 			// 	}
 			// }
 			.info {
-				margin-left: $image-size + 30;
+				margin-left: $flavor-image-size + 30;
 				text-align: justify;
 			}
 			.image {
@@ -61,12 +65,13 @@
 				float: left;
 				img {
 					// margin: 0 30px 20px 30px;
-					width: $image-size;
-					height: $image-size;
+					width: $flavor-image-size;
+					height: $flavor-image-size;
 				}
 			}
 		}
 	}
+	
 	.footnotes {
 		color: $pink;
 		font-size: 1.25em;

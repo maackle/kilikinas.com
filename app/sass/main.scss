@@ -28,6 +28,9 @@ $content-overlap-large: 50px;
 $header-image-height-small: 100px;
 $header-image-height-large: 300px;
 
+
+$flavor-image-size: 130px;
+
 @mixin respond-to($media) {
   @if $media == mobile {
     @media only screen and (max-width: $break-sm) { @content; }
