@@ -59,6 +59,9 @@
 			.info {
 				margin-left: $flavor-image-size + 30;
 				text-align: justify;
+				.ingredients {
+					text-align: left;
+				}
 			}
 			.image {
 				padding: 0;
