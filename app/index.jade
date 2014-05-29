@@ -11,6 +11,8 @@ block head
 				play: 5000,
 				animation: 'fade',
 				animation_speed: 2000,
+				inherit_width_from: '#fullscreen-slides',
+				//- inherit_height_from: '#fullscreen-slides',
 			});
 
 			$('#contact').hide();
@@ -22,12 +24,17 @@ block raw-content
 		#fullscreen-slides
 			.superslides
 				.slides-container
-					img.photo(src="assets/images/slider/15.jpg")
+					img.photo(src="assets/images/slider/kilikina-hazelnut-kiss-kaui.jpg")
+					img.photo(src="assets/images/slider/kilikina-raindrops-hazel.jpg")
+					img.photo(src="assets/images/slider/kilikina-kaui-admire.jpg")
+					img.photo(src="assets/images/slider/kilikina-leafy.jpg")
+
+					//- img.photo(src="assets/images/slider/15.jpg")
 					//- img.photo(src="assets/images/slider/4.jpg")
-					img.photo(src="assets/images/slider/27.jpg")
-					img.photo(src="assets/images/slider/body-cream.jpg")
-					img.photo(src="assets/images/flavors/goji-heart.jpg")
-					img.photo(src="assets/images/flavors/lavender-rose.jpg")
+					//- img.photo(src="assets/images/slider/27.jpg")
+					//- img.photo(src="assets/images/slider/body-cream.jpg")
+					//- img.photo(src="assets/images/flavors/goji-heart.jpg")
+					//- img.photo(src="assets/images/flavors/lavender-rose.jpg")
 
 		#footer-wrapper
 			include modules/footer

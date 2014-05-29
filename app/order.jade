@@ -1,7 +1,7 @@
 extends layout/_base
 
 block header-image
-	+header-image("order", "assets/images/headers/26.jpg")
+	+header-image("order", "assets/images/slider/kilikina-leafy.jpg")
 
 block content
 	+content-block
@@ -17,10 +17,12 @@ block content
 							| Ordering Outside of Portland, OR?
 			.squareup-embeds
 				.local-items
-					h1.locale ORDER LOCAL TO PORTLAND, OR 
-						a.reset (change?)
+					h1.locale ORDERING LOCAL TO PORTLAND, OR 
+						//- a.reset (change?)
 					
-					p.intro Please choose your item below. 
+					.intro 
+						p Please choose an item below. 
+						p During the summer months, we can only fulfill orders local to Portland, OR
 
 					a.anchor(name="chocolat")
 					h1.baby-blue-line Chocolat
@@ -30,15 +32,15 @@ block content
 						+order-item('local', 'goji-heart', 'Goji Heart')
 						+order-item('local', 'hazelnut-kiss', 'Hazelnut Kiss')
 					.row
-						+order-item('local', 'lavender-rose', 'Lavender Rose')
+						//- +order-item('local', 'lavender-rose', 'Lavender Rose')
 						+order-item('local', 'maca-cream-delight-local-portland-or', 'Maca Cream Delight')
 
-					a.anchor(name="bodycare")
-					h1.baby-blue-line Body Care
-					.row
-						+order-item('local', 'kilikina-s-cacao-body-cream-local-portland-or', 'Cacao Body Cream')
+					//- a.anchor(name="bodycare")
+					//- h1.baby-blue-line Body Care
+					//- .row
+					//- 	+order-item('local', 'kilikina-s-cacao-body-cream-local-portland-or', 'Cacao Body Cream')
 
-				.anywhere-items
+				//- .anywhere-items
 					h1.locale ORDER ANYWHERE IN THE U.S. 
 						a.reset (change?)
 					

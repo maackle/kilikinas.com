@@ -29,8 +29,7 @@
       }
     };
     $orderChoices.find('.choice').click(unfoldOrderPage);
-    $orderItems.find('a.reset').click(resetOrderPage);
-    return resetOrderPage();
+    return $orderItems.find('a.reset').click(resetOrderPage);
   });
 
 }).call(this);
