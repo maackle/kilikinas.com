@@ -220,10 +220,10 @@ a.order-callout {
 	}
 
 	.attribution {
-		color: rgba($text-color, 0.33);
 		font-size: 12px;
+		color: rgba($text-color, 0.5);
 		a {
-			color: rgba($text-color, 0.33);
+			color: rgba($text-color, 0.5);
 			text-decoration: underline;
 			&:hover {
 				text-decoration: underline;
