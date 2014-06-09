@@ -26,4 +26,6 @@ $ ->
 	
 	$orderChoices.find('.choice').click unfoldOrderPage
 	$orderItems.find('a.reset').click resetOrderPage
-	resetOrderPage()
+
+	# Uncomment the next line to show locale choices
+	# resetOrderPage()

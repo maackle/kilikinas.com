@@ -219,12 +219,16 @@ a.order-callout {
 		}
 	}
 
-	.attribution a {
-		color: $text-color;
-		text-decoration: underline;
-		&:hover {
+	.attribution {
+		font-size: 12px;
+		color: rgba($text-color, 0.5);
+		a {
+			color: rgba($text-color, 0.5);
 			text-decoration: underline;
-			color: $blue;
+			&:hover {
+				text-decoration: underline;
+				color: $blue;
+			}
 		}
 	}
 
