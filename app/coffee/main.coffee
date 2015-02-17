@@ -23,9 +23,9 @@ $ ->
 			$orderItems.find('.local-items').show()
 		else
 			$orderItems.find('.anywhere-items').show()
-	
+
 	$orderChoices.find('.choice').click unfoldOrderPage
 	$orderItems.find('a.reset').click resetOrderPage
 
 	# Uncomment the next line to show locale choices
-	# resetOrderPage()
+	resetOrderPage()

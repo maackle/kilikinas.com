@@ -10,19 +10,19 @@ block content
 				h2.align-center Please choose one:
 				.row
 					.col-sm-6
-						h2.choice.local 
+						h2.choice.local
 							| Ordering Local to Portland, OR?
-					.col-sm-6 
-						h2.choice.anywhere 
+					.col-sm-6
+						h2.choice.anywhere
 							| Ordering Outside of Portland, OR?
 			.squareup-embeds
 				.local-items
-					h1.locale ORDERING LOCAL TO PORTLAND, OR 
-						//- a.reset (change?)
-					
-					.intro 
-						p Please choose an item below. 
-						p During the summer months, we can only fulfill orders local to Portland, OR
+					h1.locale ORDERING LOCAL TO PORTLAND, OR
+						a.reset (change?)
+
+					.intro
+						p Please choose an item below.
+						//- p During the summer months, we can only fulfill orders local to Portland, OR
 
 					a.anchor(name="chocolat")
 					h1.baby-blue-line Chocolat
@@ -40,12 +40,12 @@ block content
 					//- .row
 					//- 	+order-item('local', 'kilikina-s-cacao-body-cream-local-portland-or', 'Cacao Body Cream')
 
-				//- .anywhere-items
-					h1.locale ORDER ANYWHERE IN THE U.S. 
+				.anywhere-items
+					h1.locale ORDER ANYWHERE IN THE U.S.
 						a.reset (change?)
-					
-					p.intro Please choose your item below. 
-					
+
+					p.intro Please choose your item below.
+
 					a.anchor(name="chocolat")
 					h1.baby-blue-line Chocolat
 					.row
@@ -56,17 +56,17 @@ block content
 					.row
 						+order-item('anywhere', 'lavender-rose-1', 'Lavender Rose')
 						+order-item('anywhere', 'maca-cream-delight-local-portland-or-1', 'Maca Cream Delight')
-					
+
 					a.anchor(name="bodycare")
 					h1.baby-blue-line Body Care
 					.row
 						+order-item('anywhere', 'cacao-body-cream-giveaways-with-valentine-s-orders', 'Cacao Body Cream')
 				<script src="https://cdn.sq-api.com/market/embed.js" charset="utf-8"></script>
 
-				
+
 			h2.baby-blue-line Custom Orders
 			p.intro For larger or custom orders, please contact us directly at <a href="mailto:kristina@kilikinas.com">kristina@kilikinas.com</a>
-			
+
 
 
 
