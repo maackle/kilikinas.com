@@ -48,7 +48,7 @@
 	.ingredients {
 		// clear: both;
 	}
-	
+
 }
 
 .flavors-page {
@@ -82,7 +82,7 @@
 			}
 		}
 	}
-	
+
 	.footnotes {
 		color: $pink;
 		font-size: 1.25em;
@@ -154,7 +154,9 @@
 			color: black;
 			&:hover {
 				background: $blue;
-				color: white;
+				a{
+					color: white;
+				}
 			}
 		}
 	}
